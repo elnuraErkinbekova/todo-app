@@ -5,9 +5,9 @@ app = Flask(__name__)
 todos = []
 
 
-@app.get(jsonify(status="ok"))
+@app.get("/health")
 def health():
-    return jsonify(status="ok")
+    return jsonify(status="OK")
 
 
 @app.get("/todos")
